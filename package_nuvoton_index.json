@@ -4,9 +4,11 @@
             "help": {
                 "online": "http://www.nuvoton.com"
             },
+
             "maintainer": "Nuvoton",
             "name":"nuvoton",
             "platforms": [
+
                 {
                   "name": "NuMaker UNO",
                   "architecture": "nuvoton",
