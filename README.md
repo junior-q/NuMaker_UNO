@@ -20,11 +20,6 @@ Main changes, from Nuvoton git, are for M453 devices and speeduino project
 | **[Speeduino-M453V](https://direct.nuvoton.com/en/numaker-nuc131u)**                                  | ✔️ | ✔️ | ❌ |
 | **[NuMaker-Uno](https://direct.nuvoton.com/en/numaker-uno)**                                          | ✔️ | ❌ | ❌ |
 | **[NuMaker-NUC131U](https://direct.nuvoton.com/en/numaker-nuc131u)**                                  | ✔️ | ✔️ | ❌ |
-| **[NuMaker-M032BTAI](https://direct.nuvoton.com/en/numaker-m032btai)**                                | ✔️ | ❌ | ✔️ |
-| **[NuMaker-M032KG](https://direct.nuvoton.com/en/numaker-m032kg)**                                    | ✔️ | ❌ | ️❌ |
-| **[NuMaker-M252KG](https://direct.nuvoton.com/en/numaker-m252kg)**                                    | ✔️ | ❌ | ❌ |
-| **[NuMaker-PFM-M487](https://direct.nuvoton.com/en/numaker-pfm-m487)**                                | ✔️ | ❌ | ❌ |
-| **[NuMaker-M467HJ](https://direct.nuvoton.com/en/numaker-m467hj)**                                    | ✔️ | ❌ | ❌ |
 
 Note: Compatible to [Seeed_Arduino_CAN](https://github.com/Seeed-Studio/Seeed_Arduino_CAN)
 
@@ -51,10 +46,8 @@ The driver can be found at: [Nu-Link_USB_Driver](https://www.nuvoton.com/resourc
 To use the EEPROM library and examples, it requires an external EEPROM connected via i2c(Wire) interface. This library has been verified with [AT24LC64](https://www.microchip.com/en-us/product/24lc64)
 
 # Compatible Versions of Arduino IDE
-* 2.3.2 up
-* Debug function is supported for boards with Nu-Link2. 
-* Nu-Link1 is supported using open-ocd in usb mode: use sloeber as primary ide
-
+* 2.3.2 up, note: untested
+* Debug function is supported for boards with Nu-Link2, note: untested
 
 # Disclaimer
 The Software is furnished "AS IS", without warranty as to performance or results, and
