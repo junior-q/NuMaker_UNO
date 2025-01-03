@@ -1,36 +1,42 @@
-- [NuMaker UNO board package for Arduino IDE](#numaker-uno-board-package-for-arduino-ide)
+- [NuMaker UNO board package for Sloeber IDE](#numaker-uno-board-package-for-arduino-ide)
 - [Supported Boards & Features](#supported-boards--features)
 - [Board Package Installation Steps](#board-package-installation-steps)
 - [VCOM Driver Installation Steps (Optional for M032BT)](#vcom-driver-installation-steps-optional-for-m032bt)
 - [EEPROM Library Notes and Resource](#eeprom-library-notes-and-resource)
-- [Compatible Versions of Arduino IDE](#compatible-versions-of-arduino-ide)
+- [Compatible Versions of Sloeber IDE](#compatible-versions-of-arduino-ide)
 - [Disclaimer](#disclaimer)
 - [Important Notice](#important-notice)
 
-# NuMaker UNO board package for Arduino IDE
-This repository contains the package descriptor for NuMaker UNO boards
+# NuMaker UNO board package for Sloeber IDE
+This repository contains the package descriptor for NuMaker UNO boards, NuTiny or speeduino boards
+Main changes, from Nuvoton git, are for M453 devices and speeduino project
+
 
 # Supported Boards & Features
 
-| NuMaker Boards | Rich peripherals |Embedded CAN<br>nvtCAN(*Note) |Bluetooth Low Energy<br>ArduinoBLE(***1.2.1***) |
-| -------------- | ---------------- | ----------------------------------------------- |----------------------------------------------- |
-| **[NuMaker-Uno](https://direct.nuvoton.com/en/numaker-uno)**     | ✔️              | ❌                                               | ❌                                          |
-| **[NuMaker-NUC131U](https://direct.nuvoton.com/en/numaker-nuc131u)**     | ✔️              | ✔️                                               | ❌                                          |
-| **[NuMaker-M032BTAI](https://direct.nuvoton.com/en/numaker-m032btai)**     | ✔️              | ❌                                               | ✔️                                           |
-| **[NuMaker-M032KG](https://direct.nuvoton.com/en/numaker-m032kg)**     | ✔️              | ❌                                               | ️❌                                         |
-| **[NuMaker-M252KG](https://direct.nuvoton.com/en/numaker-m252kg)**       | ✔️              | ❌                                               | ❌                                           |
-| **[NuMaker-PFM-M487](https://direct.nuvoton.com/en/numaker-pfm-m487)**       | ✔️              | ❌                                               | ❌                                           |
-| **[NuMaker-M467HJ](https://direct.nuvoton.com/en/numaker-m467hj)**       | ✔️              | ❌                                               | ❌                                           |
+| Boards | Rich peripherals |Embedded CAN<br>nvtCAN(*Note) |Bluetooth Low Energy<br>ArduinoBLE(***1.2.1***) |
+| ----------------- | ------------------ | -- | -- |
+| **[NuTiny-M451V](https://www.techdesign.com/market/nuvoton/product-detail/ntc000102/nutiny-m451v)**   | ✔️ | ✔️ | ❌ |
+| **[Speeduino-M453V](https://direct.nuvoton.com/en/numaker-nuc131u)**                                  | ✔️ | ✔️ | ❌ |
+| **[NuMaker-Uno](https://direct.nuvoton.com/en/numaker-uno)**                                          | ✔️ | ❌ | ❌ |
+| **[NuMaker-NUC131U](https://direct.nuvoton.com/en/numaker-nuc131u)**                                  | ✔️ | ✔️ | ❌ |
+| **[NuMaker-M032BTAI](https://direct.nuvoton.com/en/numaker-m032btai)**                                | ✔️ | ❌ | ✔️ |
+| **[NuMaker-M032KG](https://direct.nuvoton.com/en/numaker-m032kg)**                                    | ✔️ | ❌ | ️❌ |
+| **[NuMaker-M252KG](https://direct.nuvoton.com/en/numaker-m252kg)**                                    | ✔️ | ❌ | ❌ |
+| **[NuMaker-PFM-M487](https://direct.nuvoton.com/en/numaker-pfm-m487)**                                | ✔️ | ❌ | ❌ |
+| **[NuMaker-M467HJ](https://direct.nuvoton.com/en/numaker-m467hj)**                                    | ✔️ | ❌ | ❌ |
 
 Note: Compatible to [Seeed_Arduino_CAN](https://github.com/Seeed-Studio/Seeed_Arduino_CAN)
 
-# Board Package Installation Steps
-1. Download and Install Arduino IDE from https://www.arduino.cc/en/Main/Software
-2. Double-click arduino.exe, and then go to **File->Preferences**
-3. Paste following URL to 'Additional Boards Manager URLs' input field: 
-`https://raw.githubusercontent.com/OpenNuvoton/NuMaker_UNO/master/package_nuvoton_index.json`
-4. Under **Tools->Board->Boards Manger**, search `NuMaker UNO`, click **Install**
-5. You can now select NuMaker UNO and install it in Arduino IDE.
+# Board Package Installation Steps for Sloeber
+1. Download and Install Sloeber IDE from https://eclipse.baeyens.it/
+2. start Sloeber, and then go to **Windows->Preferences**
+3. Select **Sloeber->Third Party index url **
+4. Paste following URL to 'Additional Boards Manager URLs' input field: 
+`https://raw.githubusercontent.com/junior-q/NuMaker_UNO/master/package_nuvoton_index.json`
+5. Under **Windows->Preferences->Sloeber->Platform and Board**, select `nuvoton`, click **Apply and Close**
+6. You can create or import a project and select a NuMaker platform and Board from your project properties
+
 
 # VCOM Driver Installation Steps (Optional for M032BT)
 The Virtual COM (VCOM) interface requires a VCOM driver to be installed on PC first. 
@@ -46,7 +52,9 @@ To use the EEPROM library and examples, it requires an external EEPROM connected
 
 # Compatible Versions of Arduino IDE
 * 2.3.2 up
-* Debug function is supported for boards with Nu-Link2. Nu-Link1 is not supported so far.
+* Debug function is supported for boards with Nu-Link2. 
+* Nu-Link1 is supported using open-ocd in usb mode: use sloeber as primary ide
+
 
 # Disclaimer
 The Software is furnished "AS IS", without warranty as to performance or results, and
